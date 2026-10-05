@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>困在系统之外：当一座城市"在线"，2.7亿人怎么办？</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 章节导航圆点 -->
+  <nav class="nav-dots" id="navDots">
+    <a href="#section-cover" class="nav-dot active" data-section="0" title="封面">
+      <span class="nav-label">封面</span>
+    </a>
+    <a href="#section-1" class="nav-dot" data-section="1" title="第一章">
+      <span class="nav-label">挂号困境</span>
+    </a>
+    <a href="#section-2" class="nav-dot" data-section="2" title="第二章">
+      <span class="nav-label">城市漫游</span>
+    </a>
+    <a href="#section-3" class="nav-dot" data-section="3" title="第三章">
+      <span class="nav-label">深度分析</span>
+    </a>
+    <a href="#section-4" class="nav-dot" data-section="4" title="第四章">
+      <span class="nav-label">解决方案</span>
+    </a>
+    <a href="#section-5" class="nav-dot" data-section="5" title="第五章">
+      <span class="nav-label">行动倡议</span>
+    </a>
+  </nav>
+
+  <!-- 封面页 -->
+  <section class="section section-cover" id="section-cover">
+    <div class="cover-bg"></div>
+    <div class="cover-content">
+      <div class="cover-subtitle-top">数字弃民 · 老年人数字鸿沟</div>
+      <h1 class="cover-title">
+        <span class="title-line">困在系统之外</span>
+        <span class="title-sub">当一座城市"在线"，2.7亿人怎么办？</span>
+      </h1>
+      <p class="cover-desc">
+        当城市的脉搏越来越快，当每一扇门都需要扫码开启，<br>
+        有一群人，正站在数字时代的门外。
+      </p>
+      <div class="cover-stats">
+        <div class="stat-item">
+          <span class="stat-number">1.61<span class="stat-unit">亿</span></span>
+          <span class="stat-label">60岁及以上老年网民</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">52.0<span class="stat-unit">%</span></span>
+          <span class="stat-label">老年群体互联网普及率</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">1.55<span class="stat-unit">亿</span></span>
+          <span class="stat-label">未能融入数字生活的老人</span>
+        </div>
+      </div>
+    </div>
+    <div class="cover-footer">
+      <div class="compliance-text">
+        <p>* 本作品为融合新闻课程作业，调研数据来自模拟访谈与公开资料综合分析</p>
+        <p>* 部分视觉素材由 AI 辅助生成，人物形象均为虚拟设定</p>
+        <p>* 数据来源：CNNIC第56次报告 / 地方政协调研 / 新京智库 / 央视网</p>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-icon">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+      <span class="scroll-text">向下滑动阅读</span>
+    </div>
+  </section>
+
+  <!-- 第一章：沉浸式交互 -->
+  <section class="section section-1" id="section-1">
+    <div class="section-header">
+      <span class="section-chapter">第一章</span>
+      <h2 class="section-title">一次挂号的"战争"</h2>
+      <p class="section-intro">就医，是老年人最常遭遇"数字壁垒"的场景之一。<br>不会线上预约、医院布局复杂、查看结果困难、线上支付不便——每一步都像一场考试。</p>
+    </div>
+    <div class="chapter-1-content">
+      <div class="phone-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-status-bar">
+              <span class="status-time">6:30</span>
+              <span class="status-icons">
+                <span class="signal">●●●●</span>
+                <span class="wifi">◉</span>
+                <span class="battery">▮▮▮▮▯</span>
+              </span>
+            </div>
+            <div class="app-header">
+              <button class="back-btn">←</button>
+              <span class="app-title">在线挂号</span>
+              <button class="more-btn">⋯</button>
+            </div>
+            <div class="hospital-info">
+              <div class="hospital-name">市中心人民医院</div>
+              <div class="hospital-addr">★★★★三甲 · 距离您 3.2 公里</div>
+            </div>
+            <div class="dept-tabs">
+              <div class="dept-tab active">内科</div>
+              <div class="dept-tab">外科</div>
+              <div class="dept-tab">骨科</div>
+              <div class="dept-tab">更多</div>
+            </div>
+            <div class="doctor-list">
+              <div class="doctor-card">
+                <div class="doctor-avatar">张</div>
+                <div class="doctor-info">
+                  <div class="doctor-name">张建国 <span class="doctor-title">主任医师</span></div>
+                  <div class="doctor-desc">心血管内科 · 从医35年 · 好评率98%</div>
+                  <div class="doctor-schedule">
+                    <div class="schedule-day">
+                      <span class="day-name">今天</span>
+                      <span class="day-status full">约满</span>
+                    </div>
+                    <div class="schedule-day">
+                      <span class="day-name">明天</span>
+                      <span class="day-status full">约满</span>
+                    </div>
+                    <div class="schedule-day">
+                      <span class="day-name">周四</span>
+                      <span class="day-status available">可约</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="book-btn" data-doctor="张建国" data-available="false">
+                  预约挂号
+                </button>
+              </div>
+              <div class="doctor-card">
+                <div class="doctor-avatar">李</div>
+                <div class="doctor-info">
+                  <div class="doctor-name">李秀兰 <span class="doctor-title">副主任医师</span></div>
+                  <div class="doctor-desc">普通内科 · 从医20年 · 好评率95%</div>
+                  <div class="doctor-schedule">
+                    <div class="schedule-day">
+                      <span class="day-name">今天</span>
+                      <span class="day-status few">仅剩2号</span>
+                    </div>
+                    <div class="schedule-day">
+                      <span class="day-name">明天</span>
+                      <span class="day-status available">可约</span>
+                    </div>
+                    <div class="schedule-day">
+                      <span class="day-name">周四</span>
+                      <span class="day-status available">可约</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="book-btn book-btn-available" data-doctor="李秀兰" data-available="true">
+                  预约挂号
+                </button>
+              </div>
+              <div class="doctor-card">
+                <div class="doctor-avatar">王</div>
+                <div class="doctor-info">
+                  <div class="doctor-name">王明辉 <span class="doctor-title">主治医师</span></div>
+                  <div class="doctor-desc">全科医学 · 从医12年 · 好评率92%</div>
+                  <div class="doctor-schedule">
+                    <div class="schedule-day">
+                      <span class="day-name">今天</span>
+                      <span class="day-status available">可约</span>
+                    </div>
+                    <div class="schedule-day">
+                      <span class="day-name">明天</span>
+                      <span class="day-status available">可约</span>
+                    </div>
+                    <div class="schedule-day">
+                      <span class="day-name">周四</span>
+                      <span class="day-status full">约满</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="book-btn book-btn-available" data-doctor="王明辉" data-available="true">
+                  预约挂号
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-caption">↑ 点击"预约挂号"按钮尝试挂号</div>
+      </div>
+
+      <div class="charts-section">
+        <div class="chart-container">
+          <h3 class="chart-title">挂号操作热力图</h3>
+          <p class="chart-subtitle">老年人在挂号 APP 中的点击分布</p>
+          <div class="chart-box" id="heatmapChart"></div>
+          <div class="chart-note">
+            <span class="note-dot hot"></span> 高频误触区
+            <span class="note-dot warm"></span> 尝试操作区
+            <span class="note-dot cold"></span> 未触及区
+          </div>
+        </div>
+        <div class="chart-container">
+          <h3 class="chart-title">情绪变化曲线</h3>
+          <p class="chart-subtitle">模拟挂号过程中的情绪波动</p>
+          <div class="chart-box" id="emotionChart"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="survey-data">
+      <h3 class="survey-title">就医数字壁垒调研数据</h3>
+      <div class="survey-grid">
+        <div class="survey-item">
+          <div class="survey-number">50<span class="survey-unit">%</span></div>
+          <div class="survey-text">农村老年人不经常使用线上预约服务</div>
+        </div>
+        <div class="survey-item">
+          <div class="survey-number">46<span class="survey-unit">%</span></div>
+          <div class="survey-text">觉得线上挂号操作困难</div>
+        </div>
+        <div class="survey-item">
+          <div class="survey-number">15<span class="survey-unit">%</span></div>
+          <div class="survey-text">很难判断病症对应什么科室</div>
+        </div>
+      </div>
+      <div class="survey-list">
+        <div class="survey-list-item">
+          <span class="survey-icon">📱</span>
+          <span>不会线上预约挂号</span>
+        </div>
+        <div class="survey-list-item">
+          <span class="survey-icon">🏥</span>
+          <span>医院布局复杂找不到科室</span>
+        </div>
+        <div class="survey-list-item">
+          <span class="survey-icon">📋</span>
+          <span>线上查看检查结果困难</span>
+        </div>
+        <div class="survey-list-item">
+          <span class="survey-icon">💳</span>
+          <span>线上支付操作不便</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-quote">
+      <blockquote>
+        "我学了三个月，还是不会用那个手机挂号。<br>
+        每次点进去，字儿小得像蚂蚁，按钮多得像迷宫。"
+        <footer>—— 王大爷，72岁，独居</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 第二章：全景场景 -->
+  <section class="section section-2" id="section-2">
+    <div class="section-header">
+      <span class="section-chapter">第二章</span>
+      <h2 class="section-title">一座城市的"数字门槛"</h2>
+      <p class="section-intro">从清晨到深夜，数字鸿沟渗透在生活的每一个角落。<br>来看看张奶奶平凡而艰难的一天。</p>
+    </div>
+
+    <div class="chapter-2-content">
+      <div class="city-map-container">
+        <h3 class="map-title">城市数字鸿沟地图</h3>
+        <div class="city-map" id="cityMap">
+          <div class="map-grid">
+            <div class="map-zone zone-residential" data-zone="residential">
+              <span class="zone-label">居住区</span>
+              <span class="zone-difficulty">难度：★★★☆☆</span>
+            </div>
+            <div class="map-zone zone-hospital" data-zone="hospital">
+              <span class="zone-label">医院</span>
+              <span class="zone-difficulty">难度：★★★★★</span>
+            </div>
+            <div class="map-zone zone-market" data-zone="market">
+              <span class="zone-label">菜市场</span>
+              <span class="zone-difficulty">难度：★★★☆☆</span>
+            </div>
+            <div class="map-zone zone-bank" data-zone="bank">
+              <span class="zone-label">银行</span>
+              <span class="zone-difficulty">难度：★★★★☆</span>
+            </div>
+            <div class="map-zone zone-station" data-zone="station">
+              <span class="zone-label">公交站</span>
+              <span class="zone-difficulty">难度：★★★★☆</span>
+            </div>
+            <div class="map-zone zone-park" data-zone="park">
+              <span class="zone-label">公园</span>
+              <span class="zone-difficulty">难度：★★☆☆☆</span>
+            </div>
+          </div>
+          <div class="map-legend">
+            <span class="legend-item"><span class="legend-dot low"></span>低难度</span>
+            <span class="legend-item"><span class="legend-dot mid"></span>中难度</span>
+            <span class="legend-item"><span class="legend-dot high"></span>高难度</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-section">
+        <h3 class="timeline-title">张奶奶的一天</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">06:30</div>
+            <div class="timeline-card">
+              <h4>早起去医院排队</h4>
+              <p>不会用手机挂号，只能凌晨五点起床去医院窗口排队。<br>经常排到了号也没了。</p>
+              <span class="card-tag tag-red">就医难</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">08:00</div>
+            <div class="timeline-card">
+              <h4>菜市场付账尴尬</h4>
+              <p>摊主说只收微信支付宝，现金找不开。<br>站在摊位前手足无措。</p>
+              <span class="card-tag tag-orange">支付难</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">10:00</div>
+            <div class="timeline-card">
+              <h4>银行取号受阻</h4>
+              <p>智能取号机要刷身份证、人脸识别，<br>折腾了十分钟还是没取到号。</p>
+              <span class="card-tag tag-yellow">办事难</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">14:00</div>
+            <div class="timeline-card">
+              <h4>坐公交找不到码</h4>
+              <p>健康码、乘车码切换来切换去，<br>司机催，后面的人也催，急出一身汗。</p>
+              <span class="card-tag tag-blue">出行难</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">19:00</div>
+            <div class="timeline-card">
+              <h4>想孙子视频不会</h4>
+              <p>儿子发视频通话过来，<br>手忙脚乱按错键，接通时对方已经挂了。</p>
+              <span class="card-tag tag-purple">沟通难</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">21:00</div>
+            <div class="timeline-card">
+              <h4>交电费碰壁</h4>
+              <p>物业说以后都要线上缴费，<br>拿着现金不知道去哪儿交。</p>
+              <span class="card-tag tag-gray">生活难</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inconvenience-data">
+        <h3 class="inconvenience-title">非网民不上网带来的生活不便</h3>
+        <p class="inconvenience-subtitle">在我国非网民群体中，60岁及以上老年人占比高达 52.1%</p>
+        <div class="inconvenience-list">
+          <div class="inconvenience-item">
+            <div class="inconvenience-icon">🔒</div>
+            <div class="inconvenience-content">
+              <div class="inconvenience-name">没有"健康码"无法进出公共场所</div>
+              <div class="inconvenience-bar">
+                <div class="inconvenience-fill" style="width: 27.9%"></div>
+                <span class="inconvenience-percent">27.9%</span>
+              </div>
+            </div>
+          </div>
+          <div class="inconvenience-item">
+            <div class="inconvenience-icon">🏢</div>
+            <div class="inconvenience-content">
+              <div class="inconvenience-name">线下服务网点减少导致办事难</div>
+              <div class="inconvenience-bar">
+                <div class="inconvenience-fill" style="width: 27.0%"></div>
+                <span class="inconvenience-percent">27.0%</span>
+              </div>
+            </div>
+          </div>
+          <div class="inconvenience-item">
+            <div class="inconvenience-icon">🎫</div>
+            <div class="inconvenience-content">
+              <div class="inconvenience-name">买不到票、挂不上号</div>
+              <div class="inconvenience-bar">
+                <div class="inconvenience-fill" style="width: 24.0%"></div>
+                <span class="inconvenience-percent">24.0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="data-source">数据来源：CNNIC第56次报告</p>
+      </div>
+
+      <div class="radar-section">
+        <h3 class="radar-title">适老化测评雷达图</h3>
+        <p class="radar-subtitle">城市公共服务适老化程度评估</p>
+        <div class="radar-chart" id="radarChart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第三章：深度分析 -->
+  <section class="section section-3" id="section-3">
+    <div class="section-header">
+      <span class="section-chapter">第三章</span>
+      <h2 class="section-title">数字鸿沟的三重困境</h2>
+      <p class="section-intro">制度、家庭、个人——数字鸿沟不是单一问题，<br>而是社会系统性失衡的缩影。</p>
+    </div>
+
+    <div class="chapter-3-content">
+      <div class="analysis-grid">
+        <div class="analysis-card policy-card">
+          <div class="card-icon">⚖️</div>
+          <h3>制度政策板块</h3>
+          <div class="policy-content">
+            <div class="policy-item">
+              <div class="policy-year">2020</div>
+              <div class="policy-text">国务院办公厅印发《关于切实解决老年人运用智能技术困难的实施方案》</div>
+            </div>
+            <div class="policy-item">
+              <div class="policy-year">2021</div>
+              <div class="policy-text">工信部启动互联网应用适老化及无障碍改造专项行动</div>
+            </div>
+            <div class="policy-item">
+              <div class="policy-year">2022</div>
+              <div class="policy-text">《"十四五"国家老龄事业发展和养老服务体系规划》发布</div>
+            </div>
+            <div class="policy-item">
+              <div class="policy-year">2023</div>
+              <div class="policy-text">首批205个网站和APP完成适老化改造，但覆盖率仍不足30%</div>
+            </div>
+          </div>
+          <div class="policy-chart-container">
+            <div class="chart-box" id="sankeyChart"></div>
+            <p class="chart-caption">老年人数字服务使用路径桑基图</p>
+          </div>
+        </div>
+
+        <div class="analysis-card family-card">
+          <div class="card-icon">👨‍👩‍👧‍👦</div>
+          <h3>中青年数字反哺劳动</h3>
+          <div class="family-stats">
+            <div class="family-stat">
+              <span class="stat-num">68<span class="stat-unit">%</span></span>
+              <span class="stat-text">年轻人曾教父母使用智能手机</span>
+            </div>
+            <div class="family-stat">
+              <span class="stat-num">3.2<span class="stat-unit">次/周</span></span>
+              <span class="stat-text">平均每周被求助次数</span>
+            </div>
+            <div class="family-stat">
+              <span class="stat-num">45<span class="stat-unit">min</span></span>
+              <span class="stat-text">每次平均教学时长</span>
+            </div>
+          </div>
+          <div class="word-cloud-container">
+            <div class="chart-box" id="wordCloudChart"></div>
+            <p class="chart-caption">数字反哺高频词云</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="aging-status">
+        <h3 class="aging-title">适老化改造的"表面功夫"</h3>
+        <p class="aging-subtitle">84个主流App中，医疗健康类适老化比例仅 20%</p>
+        <div class="aging-grid">
+          <div class="aging-card">
+            <div class="aging-percent">
+              <span class="aging-num">20<span class="aging-unit">%</span></span>
+            </div>
+            <div class="aging-label">医疗健康类APP适老化比例</div>
+          </div>
+          <div class="aging-card">
+            <div class="aging-percent">
+              <span class="aging-num">36.96<span class="aging-unit">%</span></span>
+            </div>
+            <div class="aging-label">长辈模式仍有广告</div>
+          </div>
+          <div class="aging-card">
+            <div class="aging-percent">
+              <span class="aging-num">21.74<span class="aging-unit">%</span></span>
+            </div>
+            <div class="aging-label">长辈模式含诱导内容</div>
+          </div>
+        </div>
+        <div class="aging-problems">
+          <div class="aging-problem-item">
+            <span class="problem-icon">⚠️</span>
+            <span>多数仅改造首页，二级页面恢复普通模式</span>
+          </div>
+          <div class="aging-problem-item">
+            <span class="problem-icon">⚠️</span>
+            <span>字体放大有限，图标按钮仍偏小</span>
+          </div>
+          <div class="aging-problem-item">
+            <span class="problem-icon">⚠️</span>
+            <span>语音交互功能不完善，方言识别率低</span>
+          </div>
+        </div>
+        <p class="data-source">数据来源：新京智库 / 央视网</p>
+      </div>
+
+      <div class="case-compare">
+        <h3 class="compare-title">正反案例对比</h3>
+        <div class="compare-grid">
+          <div class="compare-card positive">
+            <div class="compare-badge good">正面案例</div>
+            <h4>杭州"城市大脑"适老化改造</h4>
+            <ul>
+              <li>✓ 全市公交实现"刷脸乘车"</li>
+              <li>✓ 医院开设"老年人优先窗口"</li>
+              <li>✓ 社区设立"数字助老服务站"</li>
+              <li>✓ 老年人就医满意度提升 42%</li>
+            </ul>
+            <div class="compare-data">
+              <span class="data-label">成功率</span>
+              <span class="data-value positive-value">87%</span>
+            </div>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="compare-card negative">
+            <div class="compare-badge bad">反面案例</div>
+            <h4>某县城全面推行"无现金"</h4>
+            <ul>
+              <li>✗ 菜市场拒收现金引发老人抗议</li>
+              <li>✗ 政务大厅取消人工窗口</li>
+              <li>✗ 银行ATM机大量减少</li>
+              <li>✗ 老年人投诉量上升 230%</li>
+            </ul>
+            <div class="compare-data">
+              <span class="data-label">满意度</span>
+              <span class="data-value negative-value">31%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analysis-conclusion">
+        <div class="conclusion-box">
+          <div class="conclusion-icon">💡</div>
+          <p class="conclusion-text">
+            一个真正包容的智慧社会，不能只靠子女的"数字反哺"和志愿者的善意。<br>
+            <strong>它需要成为公共服务设计的底层逻辑。</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第四章：解决方案 -->
+  <section class="section section-4" id="section-4">
+    <div class="section-header">
+      <span class="section-chapter">第四章</span>
+      <h2 class="section-title">跨越数字鸿沟的三条路</h2>
+      <p class="section-intro">政策托底、技术赋能、社区支撑——<br>三者合力，才能让每一个人都不被时代落下。</p>
+    </div>
+
+    <div class="chapter-4-content">
+      <div class="solution-tabs">
+        <button class="solution-tab active" data-tab="policy">政策路径</button>
+        <button class="solution-tab" data-tab="tech">技术路径</button>
+        <button class="solution-tab" data-tab="community">社区路径</button>
+      </div>
+
+      <div class="solution-panels">
+        <div class="solution-panel active" data-panel="policy">
+          <div class="solution-icon">📋</div>
+          <h3>政策托底：不让任何人掉队</h3>
+          <div class="solution-grid">
+            <div class="solution-item">
+              <div class="item-num">01</div>
+              <div>
+                <h4>保留传统服务窗口</h4>
+                <p>医院、银行、政务大厅必须保留人工窗口，不得强制线上办理</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">02</div>
+              <div>
+                <h4>完善适老化标准</h4>
+                <p>出台统一的APP适老化设计标准，大字体、高对比度、简化操作</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">03</div>
+              <div>
+                <h4>数字素养教育</h4>
+                <p>将数字技能培训纳入老年大学、社区教育体系</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">04</div>
+              <div>
+                <h4>法律保障</h4>
+                <p>明确拒收现金、强制扫码等行为的法律责任</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="solution-panel" data-panel="tech">
+          <div class="solution-icon">🔧</div>
+          <h3>技术赋能：让科技有温度</h3>
+          <div class="solution-grid">
+            <div class="solution-item">
+              <div class="item-num">01</div>
+              <div>
+                <h4>一键直达模式</h4>
+                <p>APP内置"长辈模式"，首页只保留核心功能，字体放大30%</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">02</div>
+              <div>
+                <h4>语音交互优先</h4>
+                <p>全流程语音导航，支持方言识别，减少触屏操作</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">03</div>
+              <div>
+                <h4>AI 智能助手</h4>
+                <p>内置AI助手，可远程协助老人完成复杂操作</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">04</div>
+              <div>
+                <h4>多端协同</h4>
+                <p>手机、电视、智能音箱多终端联动，降低使用门槛</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="solution-panel" data-panel="community">
+          <div class="solution-icon">🏘️</div>
+          <h3>社区支撑：邻里守望相助</h3>
+          <div class="solution-grid">
+            <div class="solution-item">
+              <div class="item-num">01</div>
+              <div>
+                <h4>银龄数字课堂</h4>
+                <p>已在全国开展超 20 万场，系统教授智能手机使用技能</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">02</div>
+              <div>
+                <h4>网格员+志愿者模式</h4>
+                <p>社区网格员联合志愿者，一对一结对帮扶老年人</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">03</div>
+              <div>
+                <h4>助老服务站</h4>
+                <p>社区设立服务站，代挂号、代缴费、代买火车票</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="item-num">04</div>
+              <div>
+                <h4>银龄互助组</h4>
+                <p>低龄老人帮高龄老人，形成社区内部互助网络</p>
+              </div>
+            </div>
+          </div>
+          <div class="community-status">
+            <div class="community-highlight">
+              <span class="highlight-num">20万+</span>
+              <span class="highlight-text">"银龄数字课堂"全国开展场次</span>
+            </div>
+            <div class="community-note">
+              <p>🌱 社区网格员+志愿者"数字助老"模式，正在连接老年人与数字世界</p>
+              <p class="note-warn">⚠️ 但覆盖率和持续性仍参差不齐，需要更多社会力量参与</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-chart-section">
+        <h3 class="compare-chart-title">适老化改造前后效果对比</h3>
+        <div class="chart-box" id="compareChart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第五章：互动行动 -->
+  <section class="section section-5" id="section-5">
+    <div class="section-header">
+      <span class="section-chapter">第五章</span>
+      <h2 class="section-title">你我都是摆渡人</h2>
+      <p class="section-intro">数字鸿沟不是"他们"的问题，而是"我们"的问题。<br>每一个小小的行动，都可能成为照亮他人的光。</p>
+    </div>
+
+    <div class="chapter-5-content">
+      <div class="quiz-section">
+        <h3 class="quiz-title">互动小测试</h3>
+        <p class="quiz-subtitle">你对老年人数字困境了解多少？</p>
+        <div class="quiz-container" id="quizContainer">
+          <div class="quiz-question active" data-q="1">
+            <p class="question-text">1. 你教过家里老人使用智能手机吗？</p>
+            <div class="quiz-options">
+              <button class="quiz-option" data-score="3">经常教，耐心讲解</button>
+              <button class="quiz-option" data-score="2">教过几次，有点不耐烦</button>
+              <button class="quiz-option" data-score="1">很少，觉得他们学不会</button>
+              <button class="quiz-option" data-score="0">从来没有</button>
+            </div>
+          </div>
+          <div class="quiz-question" data-q="2">
+            <p class="question-text">2. 如果在街上遇到老人不会用手机付款，你会？</p>
+            <div class="quiz-options">
+              <button class="quiz-option" data-score="3">主动上前帮忙</button>
+              <button class="quiz-option" data-score="2">看情况再说</button>
+              <button class="quiz-option" data-score="1">假装没看见</button>
+              <button class="quiz-option" data-score="0">觉得老人活该不会</button>
+            </div>
+          </div>
+          <div class="quiz-question" data-q="3">
+            <p class="question-text">3. 你认为解决数字鸿沟最重要的是？</p>
+            <div class="quiz-options">
+              <button class="quiz-option" data-score="3">政府政策保障</button>
+              <button class="quiz-option" data-score="3">企业技术改造</button>
+              <button class="quiz-option" data-score="3">每个人多一点耐心</button>
+              <button class="quiz-option" data-score="1">老人自己学习</button>
+            </div>
+          </div>
+          <div class="quiz-result" id="quizResult">
+            <div class="result-icon">🌟</div>
+            <h3 class="result-title">感谢你的参与！</h3>
+            <p class="result-score">你的数字包容指数：<span id="scoreValue">--</span> 分</p>
+            <p class="result-desc" id="resultDesc"></p>
+          </div>
+        </div>
+        <button class="quiz-restart" id="quizRestart" style="display:none;">重新测试</button>
+      </div>
+
+      <div class="advocacy-section">
+        <div class="advocacy-card">
+          <div class="advocacy-header">
+            <h3>生成我的倡议卡</h3>
+            <p>承诺做数字时代的摆渡人</p>
+          </div>
+          <div class="advocacy-content" id="advocacyContent">
+            <div class="advocacy-pledge">
+              我承诺<br>
+              <span class="pledge-highlight">对老人多一点耐心</span><br>
+              教他们用智能手机<br>
+              帮他们跨过数字鸿沟
+            </div>
+          </div>
+          <div class="advocacy-actions">
+            <input type="text" class="name-input" id="nameInput" placeholder="输入你的名字" maxlength="10">
+            <button class="generate-btn" id="generateBtn">生成倡议卡</button>
+          </div>
+          <div class="pledge-counter">
+            已有 <span class="counter-num" id="pledgeCount">12,847</span> 人参与
+          </div>
+        </div>
+      </div>
+
+      <div class="service-points">
+        <h3 class="points-title">📌 附近助老服务点</h3>
+        <div class="points-list">
+          <div class="point-item">
+            <div class="point-icon">🏠</div>
+            <div class="point-info">
+              <h4>阳光社区数字助老服务站</h4>
+              <p>服务：免费智能手机培训 · 代挂号 · 代缴费</p>
+              <span class="point-distance">距离您 0.5 公里</span>
+            </div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🏥</div>
+            <div class="point-info">
+              <h4>市中心医院老年服务岗</h4>
+              <p>服务：协助挂号 · 指引就医 · 人工窗口优先</p>
+              <span class="point-distance">距离您 1.2 公里</span>
+            </div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">🏦</div>
+            <div class="point-info">
+              <h4>工商银行爱心窗口</h4>
+              <p>服务：老年人优先窗口 · 人工现金服务</p>
+              <span class="point-distance">距离您 0.8 公里</span>
+            </div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">📚</div>
+            <div class="point-info">
+              <h4>市图书馆老年数字课堂</h4>
+              <p>服务：每周三/五下午 免费智能手机培训班</p>
+              <span class="point-distance">距离您 2.1 公里</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="final-message">
+        <p class="final-text">
+          当我们在谈论数字鸿沟时，<br>
+          我们谈论的不只是技术，<br>
+          更是一个社会的温度。<br><br>
+          请记得，<br>
+          我们终将老去，<br>
+          善待今天的老人，<br>
+          就是善待明天的自己。
+        </p>
+        <div class="final-signature">
+          —— 愿每一个人都被时代温柔以待
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 挂号失败弹窗 -->
+  <div class="modal-overlay" id="failModal">
+    <div class="modal-box fail-modal">
+      <div class="modal-icon">😔</div>
+      <h3 class="modal-title">操作失败</h3>
+      <p class="modal-desc" id="failReason">抱歉，号源已约满</p>
+      <div class="modal-detail">
+        <p>您可以尝试：</p>
+        <ul>
+          <li>选择其他日期或医生</li>
+          <li>拨打 12320 电话预约</li>
+          <li>前往医院窗口现场挂号</li>
+        </ul>
+      </div>
+      <button class="modal-btn" id="closeModal">我知道了</button>
+    </div>
+  </div>
+
+  <!-- 倡议卡弹窗 -->
+  <div class="modal-overlay" id="advocacyModal">
+    <div class="modal-box advocacy-modal">
+      <div class="advocacy-card-preview">
+        <h3 class="preview-title">数字包容倡议卡</h3>
+        <div class="preview-content">
+          <p class="preview-name" id="previewName">--</p>
+          <p class="preview-pledge">
+            我承诺：<br>
+            对老人多一点耐心<br>
+            教他们用智能手机<br>
+            帮他们跨过数字鸿沟
+          </p>
+        </div>
+        <div class="preview-footer">
+          <span>NO. <span id="previewNumber">00000</span></span>
+          <span>数字包容行动</span>
+        </div>
+      </div>
+      <button class="modal-btn primary" id="closeAdvocacyModal">完成</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
